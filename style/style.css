@@ -1,0 +1,259 @@
+
+/* the things that affects all the pages */
+body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(violet, darkorchid );
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navbar{
+    background-color: blueviolet;
+    margin: 0 0 0 0;
+    width: 100%;
+    height: 9%;
+    display: inline-block;
+    top: 0;
+    position: sticky;
+    text-align: center;
+    border: black 0.5px solid;
+
+}
+.navbar li{
+    list-style: none;
+}
+.navbar .left{
+    display: inline-flex;
+    float: left;
+   
+}
+.navbar .right{
+    display: inline-flex;
+    float: right;
+    margin-right: 1.5%;
+}
+
+.boton{
+    border: 1px black solid;
+    background-color: darkblue;
+    text-decoration: none;
+    color: azure;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #2c2c2c;
+    transition: transform 0.3s;
+}
+.boton:hover{
+    transform: scale(1.1);
+}
+
+.boton:active{
+    transform: scale(0.9);
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    justify-items: flex-start;
+    flex-wrap: wrap;
+}
+.grid-container{
+    
+    display: grid;
+    grid-template: repeat(10, 1fr)/repeat(20,1fr);
+   
+}
+
+/* here are the things that are in the index or the main page */
+
+.foto-perfil{
+    width: 100%;
+    height: 100%;
+    grid-column: 5/9;
+    grid-row: 3/9;
+    border-radius: 80%;
+}
+
+.pres{
+    grid-column: 10/14;
+    grid-row: 5/6;
+    
+}
+
+.contact, .presentacion{
+    background-image: linear-gradient(darkslateblue, darkorchid);
+    border-radius: 50px;
+    box-shadow: 10px 10px 18px #2c2c2c;
+    margin: 5%;
+    width: 50%;
+    height: 300px;
+    border: 1px black solid;
+    transition: transform 0.5s;
+}
+
+.presentacion:hover, .contact:hover, .perfil:hover, .proyecto:hover{
+    transform: scale(1.1);
+}
+
+
+
+.contacto{
+    text-align: center;
+    grid-column: 1/20;
+}
+
+.label{
+    font-size: 1.3em;
+    margin-top: 10px;
+}
+.input{
+    width: 15%;
+    border-radius: 10px;
+    background-color: #3d3054;
+    margin-top: 10px;
+}
+.enviar{
+    background-color: #3d3054;
+    color: beige;
+    margin: 10px;
+    font-size: 1.3em;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.enviar:hover{
+    transform: scale(1.1);
+}
+
+.enviar:active{
+    transform: scale(0.9);
+}
+
+/* this are the thing from the profile page */
+
+.perfil{
+    width: 80%;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    border: 1px black solid;
+    background-image: linear-gradient(darkslateblue, darkorchid);
+    box-shadow: 10px 10px 18px #2c2c2c;
+    border-radius: 50px;
+    text-align: center;
+    transition: transform 0.5s;
+}
+
+.perfil-img{
+    width: 30%;
+    height: auto;
+    max-height: 80%;
+    margin: 1rem;
+    border-radius: 100%;
+}
+.perfil-presentacion{
+    width: 50%;
+    margin: 1rem;
+    font-size: larger;
+}
+
+.proyectos{
+    width: 90%;
+    margin: 2%;
+}
+
+.proyecto{
+    width: 30%;
+    margin: 1.5%;
+    max-height: 500px;
+    text-align: center;
+    border: 1px black solid;
+    background-image: linear-gradient(darkslateblue, darkorchid);
+    box-shadow: 10px 10px 18px #2c2c2c;
+    border-radius: 50px;
+    
+    transition: transform 0.5s;
+}
+
+.titulo{
+    width: 100%;
+    text-align: center;
+}
+.proyectos-titulo{
+    color: #322968;
+    font-size: 2rem
+}
+
+.proyecto-titulo{
+    color: hsl(248, 54%, 14%);
+    font-size: 1.5rem;
+    grid-column: 1/20;
+    grid-row: 1/1;
+}
+
+.proyect-description{
+    grid-column: 3/17;
+    grid-row: 2/9;
+    font-size: 1.25rem;
+    overflow-Y: scroll;
+}
+
+.repositorio{
+    grid-column: 7/15;
+    grid-row: 9/9;
+}
+
+/* the changes for the adaptative page */
+
+@media (max-width:768px){
+    .boton{
+        padding: 0.5rem;
+    }
+
+    .foto-perfil{
+        width: 100%;
+        height: 100%;
+        grid-column: 2/9;
+        grid-row: 3/9;
+        border-radius: 80%;
+    }
+    
+    .pres{
+        grid-column: 10/19;
+        grid-row: 5/6;
+        
+    }
+
+    .input{
+        width: 40%;
+    }
+    .perfil-img{
+        width: 100%;
+    }
+    .perfil-presentacion{
+        width: 100%;;
+    }
+    .proyecto{
+        width: 45%;
+    }
+
+    .presentacion:hover, .contact:hover, .perfil:hover, .proyecto:hover{
+        transform: scale(1);
+    }
+}
+
+@media (max-width:500px){
+    .contact, .presentacion{
+        width: 80%;
+    }
+    .proyecto{
+        width: 90%;
+    }
+}
+

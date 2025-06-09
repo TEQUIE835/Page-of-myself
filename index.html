@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi portafolio</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <!-- navbar from the page -->
+    <header class="navbar">
+        <nav>
+            <ul>
+                <li><a class="boton left" href="#contacto">Contact</a></li>
+                <li><a class="boton right" href="index.html">Home</a></li>
+                <li><a class="boton right" href="perfil.html">Profile</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <!-- the main side of the page -->
+    <main class="flex-container">
+
+        
+        <section class="grid-container presentacion">
+            <!-- a photo of myself -->
+            <img class="foto-perfil" src="assets/img/foto de perfil.jpg" alt="Imagen de perfil de la persona">
+
+            <!-- This is a short description of myself -->
+            <article class="pres">
+                <h2>Hello, I'm David, A coder from Riwi</h2>
+                <a class="boton" href="perfil.html">About me</a>
+            </article>
+        </section>
+        <br>
+
+        <!-- here is a form to contact me (useless for now) -->
+        <section class="grid-container contact">
+            <article class="contacto" id="contacto">
+                <h2>Contacto</h2>
+                <form action="">
+                    <label for="nombre" class="label">Name:</label>
+                    <input type="text" id="nombre" class="input">
+                    <br>
+                    <label for="correo" class="label">Email:</label>
+                    <input type="email" id="correo" class="input">
+                    <br>
+                    <button class="enviar">Send</button>
+                </form>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
