@@ -22,6 +22,7 @@ body, html{
     position: sticky;
     text-align: center;
     border: black 0.5px solid;
+    z-index: 2;
 
 }
 .navbar li{
@@ -201,8 +202,9 @@ body, html{
     grid-column: 3/17;
     grid-row: 2/9;
     font-size: 1.25rem;
-    overflow-Y: scroll;
+    overflow: scroll;
 }
+::-webkit-scrollbar { display: none; }
 
 .repositorio{
     grid-column: 7/15;
